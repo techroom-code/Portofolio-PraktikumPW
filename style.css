@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar::after {
+    content: "";
+    
+    clear: both;
+}
+
+img {
+    border-radius: 50px 50px 50px 50px;
+    
+        max-width: 100%;
+       
+   
+}
+
+
+
+.navbar {
+    background-color: rgb(232, 227, 223);
+    width: 100% ;
+margin-left:  0;
+
+padding: 0%;
+box-shadow: none;
+z-index: 1000;
+position: fixed;
+transition: top 0.3s;
+top: 0;
+}
+
+.hidden {
+    top: -100px; /* Sembunyikan navbar di atas layar */
+}
+
+
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #212529;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    z-index: 100;
+}
+
+#home {
+    margin-left: 250px; /* Offset for the sidebar */
+    background: url('https://st5.depositphotos.com/7595566/61995/i/450/depositphotos_619954074-stock-photo-aesthetic-home-office-desk-workspace.jpg') no-repeat center center/cover;
+    height: 700px;
+    width: 1000px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.hero-text h1 {
+   
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+
+
+.hero-text p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    transition: color ease;
+    color: white;
+    
+ 
+}
+
+.nav-link:hover {
+   color: goldenrod;
+}
+.nav-link:active {
+    color: goldenrod;
+    background-color: grey;
+}
+
+a i {
+    font-size: 1.5rem;
+}
+
+a:hover i {
+    color: #007bff;
+}
+.navbar-toggler {
+    color: goldenrod;
+    background-color: goldenrod;
+    
+
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        position: absolute;
+    width: 100% ;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        width: 100% ;
+    }
+}
+
+
+.btn-close-color {
+    color: bisque;
+    background-color: bisque;
+}
+
+
+.card {
+    margin-left: 300px ;
+    margin-top: 80px ;
+    margin-right: 50px ;
+    margin-bottom: 100px;
+    color:darkslategrey;
+    background-color: rgb(243, 232, 219);
+    border-radius: 40px 0 40px 0;
+    
+}
+
+#about {
+    color: black;
+margin-left: 250px ;
+
+margin-top: 50px;
+font-family: 'Newsreader';
+font-weight: 100;
+border-radius: 0px;
+
+}
+
+.about-text{
+    font-size: 20px;
+    font-weight: 1000;
+    margin: auto;
+}
+
+
+.social-icons {
+    border-color: white;
+    color: white;
+    
+}
+
+#about img{
+    border-radius: 20px;
+    border: solid goldenrod;
+}
+
+.about-section p{
+    
+    text-align: left;
+}
+.about-info{
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    
+}
+
+.details ul{
+   font-size: 18px;
+   font-weight:bold;
+   
+   
+}
+
+#quote {
+    margin-left: 50px;
+}
+
+#education{
+    color: black;
+margin-left: 250px ;
+margin-top: 150px ;
+font-family: 'Newsreader';
+font-weight: 100;
+border-radius: 0px;
+
+}
+
+/* Container utama timeline */
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 30px; /* memberi ruang untuk garis dan marker */
+     /* warna biru untuk garis vertikal */
+}
+
+/* Item timeline */
+.timeline-item {
+    position: relative;
+    padding: 20px 0;
+    font-size: 18px;
+   font-weight:bold;
+}
+
+/* Marker di setiap item */
+.timeline-icon {
+    position:absolute;
+    left: -37px; 
+    top: 25px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    z-index: 1;
+    border: 2px solid goldenrod;
+    /* warna biru untuk marker */
+    border-radius: 50%; /* membuat marker menjadi lingkaran */
+     /* border putih di sekitar marker */
+     box-shadow: 0 0 0 2px goldenrod;
+}
+
+/* Konten timeline */
+.timeline-content {
+    padding-left: 20px;
+}
+
+/* Judul dan deskripsi */
+.timeline-content h3 {
+    font-weight: bold;
+    margin-top: 0;
+}
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: -32px; /* Sesuaikan agar sejalan dengan lingkaran */
+    top: 40px;
+    bottom: -25px;
+    width: 2px;
+    height: 250px;
+    
+    background-color: goldenrod;
+   
+}
+.timeline-content P{
+    font-family: 'Poiret One';
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 40px;
+    bottom: -25px;
+    width: 2px;
+    /*background-color: goldenrod;
+    z-index: -1; /* Untuk memastikan garis ada di belakang ikon */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: goldenrod;
+    z-index: -1; /* Garis berada di belakang ikon */
+}
+
+#skills{
+    color: black;
+margin-left: 250px ;
+margin-top: 70px;
+font-family: 'Newsreader';
+font-weight: 100;
+border-radius: 0px;
+
+}
+
+.progress{
+margin: 10px 50px 50px 20px;
+}
+
+#skills ul{
+    font-family: 'Poiret One';
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        display: block;
+    }
+}
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 480px) {
+    .container {
+        display: block;
+    }
+
+    .item {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardbody{
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    #education {
+        padding-top: 100px;
+        padding-left: 10px; /* Tambahkan lebih banyak padding untuk layar lebih besar */
+    }
+    #about {
+        padding-top: 100px;
+        padding-left: 10px; 
+    }
+    #skills{
+        padding-top: 100px;
+        padding-left: 10px; 
+    }
+    #project{
+        padding-top: 100px;
+    }
+    #contacts{
+        padding-top: 100px;
+    }
+    
+}
+
+#project{
+    color: black;
+margin-left: 260px ;
+margin-top: 100px;
+font-family: 'Newsreader';
+font-weight: 100;
+border-radius: 0px;
+
+}
+
+#project h3{
+    margin: 30px 0 30px 39px;
+}
+#project p{
+    margin-bottom: 20px;
+}
+
+#contacts{
+    color: black;
+margin-left: 260px;
+margin-top: 100px;
+font-family: '  Newsreader';
+font-weight: 100;
+
+
+}
+
+.list-group{
+    font-family: "Poiret One";
+    font-weight: 900;
+}
+
+
+.button {
+    padding: 20px 20px 50px 20px ;
+    color: black;
+    background-color: bisque;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    border: solid goldenrod;
+    margin: 20px 750px 20px 40px ;
+    padding: 10px 10px 10px 20px;
+}
+.button:hover {
+    background-color: goldenrod;
+    color: black;
+}
+.btn {
+    padding: 20px 10px 50px 20px;
+    color: black;
+    background-color: bisque;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    border: solid goldenrod;
+    margin: 20px 570px 20px 40px;
+    padding: 10px 10px 10px 20px ;
+}
+
+.contact-form {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100% ;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid goldenrod;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+   
+}
+
+.contact-form button {
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Lexend';
+}
+
+.contact-form button:hover {
+    background-color: gray;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+    
+    .form-group {
+        flex-direction: column;
+    }
+    .contact-form {
+        flex-direction: row;
+    }
+}
